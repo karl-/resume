@@ -1,12 +1,43 @@
-using System;
+using HandlebarsDotNet;
 
-namespace Resume
+namespace Resume;
+
+static class Program
 {
-    static class Program
+    static readonly string[] SourceFiles =
+    [
+        "Contact.md",
+        "Experience.md",
+        "Education.md",
+        "Skills.md",
+        "Presentations.md"
+    ];
+
+    const string DefaultOutputPath = "Resume.md";
+
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        var templatePath = args?.IndexOf("--template") is { } templateIndex
+                           && templateIndex > -1
+                           && templateIndex < args.Length - 1
+                           && File.Exists(args[templateIndex + 1])
+            ? args[templateIndex + 1]
+            : "src/Templates/resume.hbs";
+
+        var outputPath = args?.IndexOf("--output") is {} outputIndex
+                         && outputIndex > -1
+                         && outputIndex < args.Length - 1
+            ? args[outputIndex + 1]
+            : DefaultOutputPath;
+
+        var source = File.ReadAllText(templatePath);
+        var template = Handlebars.Compile(source);
+        
+        var data = SourceFiles.ToDictionary(
+            file => Path.GetFileNameWithoutExtension(file)!,
+            file => File.ReadAllText(file).Trim());
+
+        File.WriteAllText(outputPath, template(data).TrimEnd() + Environment.NewLine);
+        Console.WriteLine($"Generated {outputPath}");
     }
 }

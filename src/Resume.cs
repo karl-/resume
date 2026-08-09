@@ -6,6 +6,7 @@ public class Resume
     public List<Experience> Experience = [];
     public List<Education> Education = [];
     public List<string> Skills = [];
+    public List<Presentation> Presentations = [];
 }
 
 public class Contact
@@ -34,3 +35,10 @@ public class Education
     public List<string> Awards { get; set; } = [];
 }
 
+public class Presentation
+{
+    public required string Title { get; set; }
+    public required string Conference { get; set; }
+    public required string Location { get; set; }
+    public required string Date { get; set; }
+}

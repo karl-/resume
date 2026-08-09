@@ -7,15 +7,11 @@
 
 ## Description
 
-Led a team building a consumer focused 3D design configurator for [Lowes.com](http://Lowes.com) that allows customers to preview a catalog of products in a realtime interactive viewer, as well as a server hosted HDRP panorama renderer to deliver high quality previews of the finished product. 3D room designer built in Unity with JS bindings.
-
-- Architected the specifications and coordinated the creation and delivery of thousands of hand-crafted models and textures.
-- Worked with web team to build a bindings layer to Javascript.
-- Implemented content delivery via AWS services, utilizing S3, EC2, and SQS.
-- Created a panorama renderer with HDRP pathtracing, running as a standalone service with a CLI interface.
-- Architected and implemented a 3D render to high-quality upscaled image pipeline using image to image AI models.
-- Image to high quality 3D render with product swap.
-    - Given a user image, it constructs a 3D scene, composites an arbitrary number of replacement products (ex, vanity or toilet) over the originals, then renders a high quality preview. Involved working with multiple AI and CV libraries (ex, MoGe, GroundingDINO, QwenVL, SAM, etc). 
+- Led development of a consumer-facing 3D room configurator for [Lowes.com](http://Lowes.com) and owned the technical direction of AI-assisted product visualization workflows.
+- Architected and implemented a pipeline that reconstructs 3D scenes from customer photographs and replaces existing products with catalog assets to produce photorealistic design previews.
+- Combined monocular geometry estimation, object detection, segmentation, scene understanding, and generative image synthesis from 3D renderings; technologies included MoGe, Grounding DINO, SAM, and Qwen-VL.
+- Led a cross-functional team and coordinated the specification, production, and delivery of thousands of hand-crafted 3D models and textures.
+- Developed AWS-hosted content and rendering infrastructure using S3, EC2, and SQS, including a standalone HDRP path-traced panorama renderer.
 
 # Pocket Worlds
 

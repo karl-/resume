@@ -1,0 +1,67 @@
+{
+	"experience": 
+	[
+		{
+			"employer": "Bond Studio",
+			"location": "Columbus, Oh (Remote)",
+			"title": "Staff Software Engineer",
+			"date": "4/2025 - Present",
+			"contact": "[https://www.bondstudio.ai/](https://www.bondstudio.ai/)",
+			"description": "file://experience/Bond.md"
+		},
+		{
+			"employer": "PocketWorlds",
+			"location": "Columbus, Oh (Remote)",
+			"title": "Staff Software Engineer",
+			"date": "3/2024 - 4/2025",
+			"contact": "[https://highrise.game/](https://highrise.game/)",
+			"description": "file://experience/PocketWorlds.md"
+		},
+		{
+			"employer": "Unity Technologies",
+			"location": "Columbus, Oh (Remote)",
+			"title": "Manager, Software Engineering",
+			"date": "6/2020 - 3/2024",
+			"contact": "[http://www.unity3d.com](http://www.unity3d.com)",
+			"description": "file://experience/Unity-Mgmt.md"
+		},
+		{
+			"employer": "Unity Technologies",
+			"location": "Montréal, QC",
+			"title": "Senior Software Developer",
+			"date": "8/2017 - 6/2020",
+			"contact": "[http://www.unity3d.com](http://www.unity3d.com)",
+			"description": "file://experience/Unity-SSE.md"
+		},
+		{
+			"employer": "Probuilder",
+			"Location": "Athens, Ohio",
+			"Title": "Co-Founder",
+			"Date": "2012 - 2017",
+			"contact": "[http://www.unity3d.com](http://www.unity3d.com)",
+			"description": "file://experience/Probuilder.md"
+		},
+		{
+			"employer": "Ohio University",
+			"location": "Athens, Ohio",
+			"title": "Adjunct Professor",
+			"date": "2016 - 2017",
+			"description": "file://experience/OhioUniversity.md"
+		},
+		{
+			"employer": "Kosada",
+			"location": "Athens, Ohio",
+			"title": "Software Developer",
+			"date": "2012 - 2017",
+			"contact": "[Vuo.org](http://vuo.org/)",
+			"description": "file://experience/Kosada.md"
+		},
+		{
+			"employer": "Washington College GIS Dept.",
+			"location": "Chestertown, MD",
+			"title": "Consultant",
+			"date": "2012 - 2015",
+			"description": "file://experience/WashingtonCollege.md"
+		}
+	]
+}

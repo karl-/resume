@@ -1,0 +1,1 @@
+Responsible for the creation, development, and support of a top-selling 3D modeling plugin for the Unity3D game engine, as well as a suite of additional tools. This role required an intimate knowledge of the Unity API, 3D modeling techniques, and 3D math. ProBuilder was acquired by Unity Technologies in 2017.

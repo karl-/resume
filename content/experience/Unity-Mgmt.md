@@ -1,0 +1,5 @@
+Led a team of software engineers to deliver new 3D content authoring features and maintain existing systems in the Unity Editor. The Scene Tooling team is primarily responsible for user-facing tools and workflows, including 3D navigation, object manipulation, authoring workflows, and user interface. 
+
+- Responsible for the planning and coordination of a development roadmap, working with adjacent disciplines and teams spread across multiple continents.
+- Successfully delivered several high visibility features in the Unity Editor, including a complete refactor of the tools framework, a redesign of the Scene View UI, and the Splines package. 
+- Implemented a new strategy for triaging and managing bug reports, resulting in the team significantly lowering active tickets. Assisted other teams in adopting this workflow. 

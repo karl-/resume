@@ -1,0 +1,1 @@
+Provided guidance and counseling to students and faculty working on large scale simulation projects in the Unity engine. Responsible for implementing an art pipeline to bring GIS data into Unity.

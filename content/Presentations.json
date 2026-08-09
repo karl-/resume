@@ -1,0 +1,29 @@
+{
+    "presentations":
+    [
+        {
+            "title": "Smarter Workflows and Better Tool Integration with ProBuilder",
+            "Conference": "Unite",
+            "Location": "Barcelona, Spain",
+            "Date": "2024"
+        },
+        {
+            "title": "Procedural Geometry for Games and Tools",
+            "Conference": "GDEX",
+            "Location": "Columbus, Ohio",
+            "Date": "2016"
+        },
+        {
+            "title": "ProBuilder Post-Mortem",
+            "Location": "Columbus, Ohio",
+            "Conference": "GDEX",
+            "Date": "2016"
+        },
+        {
+            "title": "Build, Test, Repeat: Instant Prototyping and Rapid Iterative Development with Probuilder",
+            "Date": "2014",
+            "Conference": "Unite",
+            "Location": "Seattle, Washington"
+        }
+    ]
+}

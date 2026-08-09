@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume</title>
+  {{#if Css}}
+  <style>
+{{{Css}}}
+  </style>
+  {{/if}}
+</head>
+<body>
+  <main class="resume">
+    <header class="contact">
+{{{Contact}}}
+    </header>
+
+    <section class="experience">
+      <h2 class="section-title">Work Experience</h2>
+{{{Experience}}}
+    </section>
+
+    <section class="education">
+      <h2 class="section-title">Education</h2>
+{{{Education}}}
+    </section>
+
+    <section class="skills">
+      <h2 class="section-title">Skills &amp; Other</h2>
+{{{Skills}}}
+    </section>
+
+    <section class="presentations">
+      <h2 class="section-title">Presentations</h2>
+{{{Presentations}}}
+    </section>
+  </main>
+</body>
+</html>

@@ -1,4 +1,5 @@
 using HandlebarsDotNet;
+using Markdig;
 
 namespace Resume;
 
@@ -13,7 +14,8 @@ static class Program
         "Presentations.md"
     ];
 
-    const string DefaultOutputPath = "Resume.md";
+    const string DefaultTemplatePath = "src/Templates/Standard.html";
+    const string DefaultOutputPath = "Resume.html";
 
     static void Main(string[] args)
     {
@@ -22,7 +24,7 @@ static class Program
                            && templateIndex < args.Length - 1
                            && File.Exists(args[templateIndex + 1])
             ? args[templateIndex + 1]
-            : "src/Templates/resume.hbs";
+            : DefaultTemplatePath;
 
         var outputPath = args?.IndexOf("--output") is {} outputIndex
                          && outputIndex > -1
@@ -35,7 +37,12 @@ static class Program
         
         var data = SourceFiles.ToDictionary(
             file => Path.GetFileNameWithoutExtension(file)!,
-            file => File.ReadAllText(file).Trim());
+            file => Markdown.ToHtml(File.ReadAllText(file).Trim()));
+
+        var stylesheetPath = Path.ChangeExtension(templatePath, ".css");
+        data["Css"] = File.Exists(stylesheetPath)
+            ? File.ReadAllText(stylesheetPath).Trim()
+            : string.Empty;
 
         File.WriteAllText(outputPath, template(data).TrimEnd() + Environment.NewLine);
         Console.WriteLine($"Generated {outputPath}");

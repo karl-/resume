@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Handlebars.Net" Version="2.4.1" />
+    <PackageReference Include="Markdig" Version="0.41.3" />
   </ItemGroup>
 
 </Project>

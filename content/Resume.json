@@ -2,5 +2,6 @@
     "contact": "file://Contact.json",
     "experience": "file://Experience.json",
     "presentations": "file://Presentations.json",
+    "education": "file://Education.json",
     "skills": "file://Skills.json"
 }

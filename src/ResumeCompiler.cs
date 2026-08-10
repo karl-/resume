@@ -15,7 +15,7 @@ static class Program
         var outputPath = GetArg(args, "--output", DefaultOutputPath);
         var contentPath = GetArg(args, "--content", DefaultContentPath);
 
-        var source = File.ReadAllText(templatePath);
+        var source = File.ReadAllText(File.Exists(templatePath) ? templatePath : DefaultTemplatePath);
 
         Handlebars.RegisterHelper("markdown", (writer, context, parameters) =>
         {
@@ -61,7 +61,6 @@ static class Program
          return args?.IndexOf(arg) is { } templateIndex
                            && templateIndex > -1
                            && templateIndex < args.Length - 1
-                           && File.Exists(args[templateIndex + 1])
             ? args[templateIndex + 1]
             : defaultValue;
     }

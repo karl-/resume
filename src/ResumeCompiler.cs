@@ -7,7 +7,7 @@ static class Program
 {
     const string DefaultContentPath = "content/Resume.json";
     const string DefaultTemplatePath = "src/Templates/Standard.html";
-    const string DefaultOutputPath = "Resume.html";
+    const string DefaultOutputPath = "bin/Resume.html";
 
     static void Main(string[] args)
     {
@@ -51,6 +51,7 @@ static class Program
             Css = css
         };
 
+        Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
         File.WriteAllText(outputPath, template(data).TrimEnd() + Environment.NewLine);
         Console.WriteLine($"Generated {outputPath}");
     }

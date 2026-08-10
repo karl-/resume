@@ -12,55 +12,66 @@
 </head>
 <body>
   <main class="resume">
-    <header class="contact">
-      {{#if Contact.Name}}<h1>{{Contact.Name}}</h1>{{/if}}
-      {{#if Contact.Address}}<p>{{Contact.Address}}</p>{{/if}}
-      {{#if Contact.Phone}}<p>{{Contact.Phone}}</p>{{/if}}
-      {{#if Contact.Website}}{{{markdown Contact.Website}}}{{/if}}
+    {{#if Contact.Name}}
+    <header class="identity">
+      <h1>{{Contact.Name}}</h1>
     </header>
+    {{/if}}
 
-    <section class="experience">
-      <h2 class="section-title">Work Experience</h2>
-      {{#each Experience}}
-      <article>
-        <h1>{{Employer}}</h1>
-        <h2>{{Title}}</h2>
-        <p><strong>{{Location}} · {{Date}}</strong>{{#if Contact}} · {{{markdownInline Contact}}}{{/if}}</p>
-        {{{markdown Description}}}
-      </article>
-      {{/each}}
-    </section>
+    <div class="resume-layout">
+      <section class="experience">
+        <h2 class="section-title">Work Experience</h2>
+        {{#each Experience}}
+        <article>
+          <h1>{{Employer}}</h1>
+          <h2>{{Title}}</h2>
+          <p><strong>{{Location}} · {{Date}}</strong>{{#if Contact}} · {{{markdownInline Contact}}}{{/if}}</p>
+          {{{markdown Description}}}
+        </article>
+        {{/each}}
+      </section>
 
-    <section class="education">
-      <h2 class="section-title">Education</h2>
-      {{#each Education}}
-      <article>
-        <h1>{{School}}</h1>
-        <h2>{{Degree}}</h2>
-        <p><strong>{{Location}} · {{Date}}</strong></p>
-        {{#if Awards}}
-        <ul>{{#each Awards}}<li>{{this}}</li>{{/each}}</ul>
-        {{/if}}
-      </article>
-      {{/each}}
-    </section>
+      <aside class="sidebar">
+        <header class="contact">
+          <h2 class="section-title">Contact</h2>
+          {{#if Contact.Address}}<p>{{Contact.Address}}</p>{{/if}}
+          {{#if Contact.Phone}}<p>{{Contact.Phone}}</p>{{/if}}
+          {{#if Contact.Email}}{{{Contact.Email}}}{{/if}}
+          {{#if Contact.Website}}{{{markdown Contact.Website}}}{{/if}}
+        </header>
 
-    <section class="skills">
-      <h2 class="section-title">Skills &amp; Other</h2>
-      <ul>
-        {{#each Skills}}<li>{{this}}</li>{{/each}}
-      </ul>
-    </section>
+        <section class="skills">
+          <h2 class="section-title">Skills &amp; Other</h2>
+          <ul>
+            {{#each Skills}}<li>{{this}}</li>{{/each}}
+          </ul>
+        </section>
 
-    <section class="presentations">
-      <h2 class="section-title">Presentations</h2>
-      {{#each Presentations}}
-      <article>
-        <h1>{{Title}}</h1>
-        <p><strong>{{Conference}}</strong> · {{Location}} · {{Date}}</p>
-      </article>
-      {{/each}}
-    </section>
+        <section class="education">
+          <h2 class="section-title">Education</h2>
+          {{#each Education}}
+          <article>
+            <h1>{{School}}</h1>
+            <h2>{{Degree}}</h2>
+            <p><strong>{{Location}} · {{Date}}</strong></p>
+            {{#if Awards}}
+            <ul>{{#each Awards}}<li>{{this}}</li>{{/each}}</ul>
+            {{/if}}
+          </article>
+          {{/each}}
+        </section>
+
+        <section class="presentations">
+          <h2 class="section-title">Presentations</h2>
+          {{#each Presentations}}
+          <article>
+            <h1>{{Title}}</h1>
+            <p><strong>{{Conference}}</strong> · {{Location}} · {{Date}}</p>
+          </article>
+          {{/each}}
+        </section>
+      </aside>
+    </div>
   </main>
 </body>
 </html>

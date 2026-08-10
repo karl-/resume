@@ -129,7 +129,7 @@ a:hover {
   margin-top: 0;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .resume {
     padding: 0.3in;
   }
@@ -151,12 +151,25 @@ a:hover {
 
 @media print {
   @page {
+    size: letter portrait;
     margin: 0.42in 0.5in;
   }
 
   .resume {
     width: auto;
+    margin: 0;
     padding: 0;
+  }
+
+  .resume-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 1.75in;
+    gap: 0.38in;
+    align-items: start;
+  }
+
+  .sidebar {
+    display: block;
   }
 
   a {
@@ -166,6 +179,10 @@ a:hover {
   h1,
   h2 {
     break-after: avoid;
+  }
+
+  li {
+    break-inside: avoid;
   }
 
   li,

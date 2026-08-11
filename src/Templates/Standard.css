@@ -162,14 +162,20 @@ a:hover {
   }
 
   .resume-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 1.75in;
-    gap: 0.38in;
-    align-items: start;
+    position: relative;
+    display: block;
+  }
+
+  .experience {
+    width: calc(100% - 2.13in);
   }
 
   .sidebar {
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.75in;
   }
 
   a {

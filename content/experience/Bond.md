@@ -1,5 +1,5 @@
 - Led development of a consumer-facing 3D room configurator for [Lowes.com](http://Lowes.com) and owned the technical direction of AI-assisted product visualization workflows.
 - Architected and implemented a pipeline that reconstructs 3D scenes from customer photographs and replaces existing products with catalog assets to produce photorealistic design previews.
-	- Combined monocular geometry estimation, object detection, segmentation, scene understanding, and generative image synthesis; technologies included MoGe, Grounding DINO, SAM, and Qwen-VL.
+	- Combined monocular geometry estimation, object detection, segmentation, scene understanding, and generative image synthesis.
 - Led a cross-functional team and coordinated the specification, production, and delivery of thousands of hand-crafted 3D models and textures.
 - Developed AWS-hosted content and rendering infrastructure using S3, EC2, and SQS, including a standalone HDRP path-traced panorama renderer.

@@ -1,14 +1,16 @@
 {
     "skills":
     [
-        "C/C++",
-        "C#",
-        "Mercurial, SVN, Git",
+        "C/C++, C#",
         "Unity",
-        "Blender",
-        "3D modeling & mesh manipulation",
-        "Software Architecture",
-        "Leadership",
+        "Computer graphics and rendering",
+        "3D Modeling",
+        "Software architecture",
+        "Generative AI",
+        "Computer vision",
+        "Content pipelines",
+        "Cross-functional leadership",
+        "Technical direction",
         "Project Management",
         "Agile"
     ]

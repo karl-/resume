@@ -51,7 +51,7 @@ static class Program
             Css = css
         };
 
-        Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+        Directory.CreateDirectory(Path.GetDirectoryName(outputPath) ?? throw new InvalidOperationException());
         File.WriteAllText(outputPath, template(data).TrimEnd() + Environment.NewLine);
         Console.WriteLine($"Generated {outputPath}");
     }

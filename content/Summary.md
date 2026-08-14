@@ -1,0 +1,1 @@
+Staff software engineer and former engineering manager with 15+ years building 3D authoring tools, graphics pipelines, and creator platforms. Co-founded ProBuilder (acquired by Unity), currently driving the technical direction and implementation of AI-assisted 3D reconstruction and spatial-visualization systems.

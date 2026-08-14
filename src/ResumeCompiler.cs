@@ -44,6 +44,7 @@ static class Program
         var data = new
         {
             resume.Contact,
+            resume.Summary,
             resume.Experience,
             resume.Education,
             resume.Skills,

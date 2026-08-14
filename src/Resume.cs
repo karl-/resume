@@ -3,6 +3,7 @@ namespace Resume;
 public class Resume
 {
     public required Contact @Contact;
+    public string Summary = string.Empty;
     public List<Experience> Experience = [];
     public List<Education> Education = [];
     public List<string> Skills = [];

@@ -18,6 +18,13 @@
     </header>
     {{/if}}
 
+    {{#if Summary}}
+    <section class="summary">
+      <h2 class="section-title">Summary</h2>
+      {{{markdown Summary}}}
+    </section>
+    {{/if}}
+
     <div class="resume-layout">
       <section class="experience">
         <h2 class="section-title">Work Experience</h2>

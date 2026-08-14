@@ -25,6 +25,7 @@ public static class ResumeParser
         return new Resume
         {
             Contact = ReadSection<Contact>(manifest.Contact, manifestDirectory),
+            Summary = ParseTextOrPathField(manifest.Summary, manifestDirectory),
             Experience = experience,
             Education = ReadOptionalSection<Education>(manifest.Education, manifestDirectory) is {} education ? [education] : [],
             Skills = ReadOptionalSection<SkillsSection>(manifest.Skills, manifestDirectory) is {} skills ? skills.Skills : [],
@@ -66,6 +67,7 @@ public static class ResumeParser
 
     sealed class ResumeManifest
     {
+        public string Summary { get; set; } = string.Empty;
         public string Contact { get; set; } = string.Empty;
         public string Experience { get; set; } = string.Empty;
         public string? Education { get; set; }

@@ -13,6 +13,12 @@
 **Website** {{markdown Contact.Website}}
 {{/if}}
 
+{{#if Summary}}
+# Summary
+
+{{{Summary}}}
+{{/if}}
+
 # Experience
 
 {{#each Experience}}

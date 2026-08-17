@@ -41,10 +41,12 @@
       <aside class="sidebar">
         <header class="contact">
           <h2 class="section-title">Contact</h2>
-          {{#if Contact.Website}}<p>{{{markdownInline Contact.Website}}}</p>{{/if}}
           {{#if Contact.Email}}<p>{{Contact.Email}}</p>{{/if}}
           {{#if Contact.Address}}<p>{{Contact.Address}}</p>{{/if}}
           {{#if Contact.Phone}}<p>{{Contact.Phone}}</p>{{/if}}
+          {{#each Contact.Websites}}
+            <p>{{{markdownInline this}}}</p>
+          {{/each}}
         </header>
 
         <section class="skills">

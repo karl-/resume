@@ -16,7 +16,7 @@ public class Contact
     public string Address { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     public string Phone { get; set; } = string.Empty;
-    public string Website { get; set; } = string.Empty;
+    public List<string> Websites { get; set; } = [];
 }
 
 public class Experience
